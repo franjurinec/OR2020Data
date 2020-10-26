@@ -1,1 +1,25 @@
-# OR2020Data
+# Medical Institutions in Croatia (FER - OR 2020/21 Dataset)
+## Metadata
+- __Licence:__ MIT
+- __Author:__ Fran Jurinec
+- __Dataset Name:__ Medical Institutions in Croatia
+- __Dataset Version:__ 1.0
+- __Last Updated:__ 26/10/2020
+- __Language:__ Croatian
+- __Attributes:__
+  - name (string)
+  - address (string)
+  - telephone (string)
+  - email (string)
+  - website	(string)
+  - city.name	(string)
+  - city.wiki_link (string)
+  - staff	(list)
+  - specializations (list)	
+  - lattitude	(string)
+  - longitude	(string)
+  - last_updated (date)
+  - staff_list_complete (boolean)
+- __Encoding:__ UTF-8
+- __Spatial Coverage:__ Croatia
+- __Available Data Formats:__ JSON, CSV
