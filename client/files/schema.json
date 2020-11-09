@@ -1,0 +1,90 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "$id": "https://github.com/franjurinec/OR2020Data/blob/main/client/files/hospitals.json",
+  "type": "array",
+  "title": "The root schema",
+  "description": "The root schema comprises the entire JSON document.",
+  "items": {
+    "description": "Model podataka Zdrastvenih Institucija.",
+    "required": [
+      "name",
+      "address",
+      "telephone",
+      "email",
+      "staff",
+      "latitude",
+      "longitude"
+    ],
+    "title": "Zdrastvena Institucija",
+    "properties": {
+      "name": {
+        "description": "Naziv Zdrastvene Institucije.",
+        "title": "Naziv"
+      },
+      "address": {
+        "description": "Adresa Zdrastvene Institucije",
+        "title": "Adresa"
+      },
+      "telephone": {
+        "description": "Telefonski broj Zdrastvene Institucije.",
+        "title": "Telefonski Broj"
+      },
+      "email": {
+        "description": "E-pošta Zdrastvene Institucije.",
+        "title": "E-pošta"
+      },
+      "website": {
+        "description": "Web stranica Zdrastvene Institucije.",
+        "title": "Web stranica"
+      },
+      "staff": {
+        "description": "Popis djelatnika zaposlenih u Zdrastvenoj Instituciji.",
+        "title": "Djelatnici",
+        "items": {
+          "description": "Model objekta Djelatnika.",
+          "required": [
+            "name",
+            "surname",
+            "specialization",
+            "specialization_wiki"
+          ],
+          "title": "Djelatnik",
+          "properties": {
+            "name": {
+              "description": "Ime djelatnika.",
+              "title": "Ime"
+            },
+            "surname": {
+              "description": "Prezime djelatnika.",
+              "title": "Prezime"
+            },
+            "specialization": {
+              "description": "Specijalizacija djelatnika.",
+              "title": "Specijalizacija"
+            },
+            "specialization_wiki": {
+              "description": "Wiki Handle Specijalizacije Djelatnika.",
+              "title": "Wiki Handle Specijalizacije"
+            }
+          }
+        }
+      },
+      "latitude": {
+        "description": "Geografska Širina lokacije Zdrastvene Institucije.",
+        "title": "Geografska Širina"
+      },
+      "longitude": {
+        "description": "Geografska Dužina lokacije Zdrastvene Institucije.",
+        "title": "Geografska Dužina"
+      },
+      "last_updated": {
+        "description": "Vrijeme kada su podaci zadnje osvježeni.",
+        "title": "Zadnje Osvježeno"
+      },
+      "staff_list_complete": {
+        "description": "Uključuje li zapis sve djelatnike.",
+        "title": "Popis djelatnika kompletan"
+      }
+    }
+  }
+}
