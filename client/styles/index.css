@@ -1,0 +1,52 @@
+body {
+    font-family: Arial, sans-serif;
+    padding: 5rem;
+    text-align: center;
+}
+
+a {
+    color: black;
+}
+
+a:hover {
+    color: gray;
+}
+
+.main-title {
+    font-size: 5rem;
+}
+
+.version-list {
+    display: flex;
+    justify-content: center;
+}
+
+.version-element {
+    margin: 1rem;
+}
+
+.version-title {
+    font-size: 2rem;
+}
+
+.downloads {
+    font-size: 1.3rem;
+}
+
+.button {
+    border-radius: 1rem;
+    background-color: black;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 2rem;
+    margin: 3rem;
+}
+
+.button:hover {
+    color: white;
+    background-color: gray;
+}
+

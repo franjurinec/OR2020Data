@@ -1,0 +1,522 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "$id": "http://example.com/example.json",
+  "type": "array",
+  "title": "Hospitals",
+  "description": "A list of hospitals in Croatia.",
+  "additionalItems": true,
+  "items": {
+    "$id": "#/items",
+    "anyOf": [
+      {
+        "$id": "#/items/anyOf/0",
+        "type": "object",
+        "title": "The first anyOf schema",
+        "description": "An explanation about the purpose of this instance.",
+        "default": {},
+        "examples": [
+          {
+            "name": "Dom Zdravlja Zagreb - Centar (Grgura Ninskog 3)",
+            "address": "Ulica Grgura Ninskog 3, 10000 Zagreb, Hrvatska",
+            "telephone": "014573244",
+            "email": "ravnateljstvo@dzz-centar.hr",
+            "website": "https://dzz-centar.hr/",
+            "staff": [
+              {
+                "name": "VESNA",
+                "surname": "MATRAPAZOVSKI SINTI",
+                "specialization": "Opća/obiteljska medicina",
+                "specialization_wiki": "Family_medicine"
+              },
+              {
+                "name": "ZORAN",
+                "surname": "TUČKAR",
+                "specialization": "Psihologijska djelatnost",
+                "specialization_wiki": "Psychiatry"
+              }
+            ],
+            "latitude": "45.804624° N",
+            "longitude": "15.975359° E",
+            "last_updated": "26/10/2020",
+            "staff_list_complete": false
+          }
+        ],
+        "required": [
+          "name",
+          "address",
+          "telephone",
+          "email",
+          "website",
+          "staff",
+          "latitude",
+          "longitude",
+          "last_updated",
+          "staff_list_complete"
+        ],
+        "properties": {
+          "name": {
+            "$id": "#/items/anyOf/0/properties/name",
+            "type": "string",
+            "title": "The name schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+              "Dom Zdravlja Zagreb - Centar (Grgura Ninskog 3)"
+            ]
+          },
+          "address": {
+            "$id": "#/items/anyOf/0/properties/address",
+            "type": "string",
+            "title": "The address schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+              "Ulica Grgura Ninskog 3, 10000 Zagreb, Hrvatska"
+            ]
+          },
+          "telephone": {
+            "$id": "#/items/anyOf/0/properties/telephone",
+            "type": "string",
+            "title": "The telephone schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+              "014573244"
+            ]
+          },
+          "email": {
+            "$id": "#/items/anyOf/0/properties/email",
+            "type": "string",
+            "title": "The email schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+              "ravnateljstvo@dzz-centar.hr"
+            ]
+          },
+          "website": {
+            "$id": "#/items/anyOf/0/properties/website",
+            "type": "string",
+            "title": "The website schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+              "https://dzz-centar.hr/"
+            ]
+          },
+          "staff": {
+            "$id": "#/items/anyOf/0/properties/staff",
+            "type": "array",
+            "title": "The staff schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": [],
+            "examples": [
+              [
+                {
+                  "name": "VESNA",
+                  "surname": "MATRAPAZOVSKI SINTI",
+                  "specialization": "Opća/obiteljska medicina",
+                  "specialization_wiki": "Family_medicine"
+                },
+                {
+                  "name": "ZORAN",
+                  "surname": "TUČKAR",
+                  "specialization": "Psihologijska djelatnost",
+                  "specialization_wiki": "Psychiatry"
+                }
+              ]
+            ],
+            "additionalItems": true,
+            "items": {
+              "$id": "#/items/anyOf/0/properties/staff/items",
+              "anyOf": [
+                {
+                  "$id": "#/items/anyOf/0/properties/staff/items/anyOf/0",
+                  "type": "object",
+                  "title": "The first anyOf schema",
+                  "description": "An explanation about the purpose of this instance.",
+                  "default": {},
+                  "examples": [
+                    {
+                      "name": "VESNA",
+                      "surname": "MATRAPAZOVSKI SINTI",
+                      "specialization": "Opća/obiteljska medicina",
+                      "specialization_wiki": "Family_medicine"
+                    }
+                  ],
+                  "required": [
+                    "name",
+                    "surname",
+                    "specialization",
+                    "specialization_wiki"
+                  ],
+                  "properties": {
+                    "name": {
+                      "$id": "#/items/anyOf/0/properties/staff/items/anyOf/0/properties/name",
+                      "type": "string",
+                      "title": "The name schema",
+                      "description": "An explanation about the purpose of this instance.",
+                      "default": "",
+                      "examples": [
+                        "VESNA"
+                      ]
+                    },
+                    "surname": {
+                      "$id": "#/items/anyOf/0/properties/staff/items/anyOf/0/properties/surname",
+                      "type": "string",
+                      "title": "The surname schema",
+                      "description": "An explanation about the purpose of this instance.",
+                      "default": "",
+                      "examples": [
+                        "MATRAPAZOVSKI SINTI"
+                      ]
+                    },
+                    "specialization": {
+                      "$id": "#/items/anyOf/0/properties/staff/items/anyOf/0/properties/specialization",
+                      "type": "string",
+                      "title": "The specialization schema",
+                      "description": "An explanation about the purpose of this instance.",
+                      "default": "",
+                      "examples": [
+                        "Opća/obiteljska medicina"
+                      ]
+                    },
+                    "specialization_wiki": {
+                      "$id": "#/items/anyOf/0/properties/staff/items/anyOf/0/properties/specialization_wiki",
+                      "type": "string",
+                      "title": "The specialization_wiki schema",
+                      "description": "An explanation about the purpose of this instance.",
+                      "default": "",
+                      "examples": [
+                        "Family_medicine"
+                      ]
+                    }
+                  },
+                  "additionalProperties": true
+                }
+              ]
+            }
+          },
+          "latitude": {
+            "$id": "#/items/anyOf/0/properties/latitude",
+            "type": "string",
+            "title": "The latitude schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+              "45.804624° N"
+            ]
+          },
+          "longitude": {
+            "$id": "#/items/anyOf/0/properties/longitude",
+            "type": "string",
+            "title": "The longitude schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+              "15.975359° E"
+            ]
+          },
+          "last_updated": {
+            "$id": "#/items/anyOf/0/properties/last_updated",
+            "type": "string",
+            "title": "The last_updated schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+              "26/10/2020"
+            ]
+          },
+          "staff_list_complete": {
+            "$id": "#/items/anyOf/0/properties/staff_list_complete",
+            "type": "boolean",
+            "title": "The staff_list_complete schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": false,
+            "examples": [
+              false
+            ]
+          }
+        },
+        "additionalProperties": true
+      },
+      {
+        "$id": "#/items/anyOf/1",
+        "type": "object",
+        "title": "The second anyOf schema",
+        "description": "An explanation about the purpose of this instance.",
+        "default": {},
+        "examples": [
+          {
+            "name": "Dom Zdravlja Zagreb - Centar (Runjaninova 4)",
+            "address": "Runjaninova 4, 10000 Zagreb, Hrvatska",
+            "telephone": "014897693",
+            "email": "ravnateljstvo@dzz-centar.hr",
+            "website": "https://dzz-centar.hr/",
+            "city": {
+              "name": "Zagreb",
+              "wiki_link": "https://hr.wikipedia.org/wiki/Zagreb"
+            },
+            "staff": [
+              {
+                "name": "ANITA TOMLJENOVIĆ",
+                "surname": "TOMLJENOVIĆSNA",
+                "specialization": "Opća/obiteljska medicina",
+                "specialization_wiki": "Family_medicine"
+              },
+              {
+                "name": "ANA",
+                "surname": "PERIĆ-MARKOTIĆ",
+                "specialization": "Dentalna zdravstvena zaštita (polivalentna)",
+                "specialization_wiki": "Oral_medicine"
+              }
+            ],
+            "latitude": "45.804525° N",
+            "longitude": "15.969266° E",
+            "last_updated": "26/10/2020",
+            "staff_list_complete": false
+          }
+        ],
+        "required": [
+          "name",
+          "address",
+          "telephone",
+          "email",
+          "website",
+          "city",
+          "staff",
+          "latitude",
+          "longitude",
+          "last_updated",
+          "staff_list_complete"
+        ],
+        "properties": {
+          "name": {
+            "$id": "#/items/anyOf/1/properties/name",
+            "type": "string",
+            "title": "The name schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+              "Dom Zdravlja Zagreb - Centar (Runjaninova 4)"
+            ]
+          },
+          "address": {
+            "$id": "#/items/anyOf/1/properties/address",
+            "type": "string",
+            "title": "The address schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+              "Runjaninova 4, 10000 Zagreb, Hrvatska"
+            ]
+          },
+          "telephone": {
+            "$id": "#/items/anyOf/1/properties/telephone",
+            "type": "string",
+            "title": "The telephone schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+              "014897693"
+            ]
+          },
+          "email": {
+            "$id": "#/items/anyOf/1/properties/email",
+            "type": "string",
+            "title": "The email schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+              "ravnateljstvo@dzz-centar.hr"
+            ]
+          },
+          "website": {
+            "$id": "#/items/anyOf/1/properties/website",
+            "type": "string",
+            "title": "The website schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+              "https://dzz-centar.hr/"
+            ]
+          },
+          "city": {
+            "$id": "#/items/anyOf/1/properties/city",
+            "type": "object",
+            "title": "The city schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": {},
+            "examples": [
+              {
+                "name": "Zagreb",
+                "wiki_link": "https://hr.wikipedia.org/wiki/Zagreb"
+              }
+            ],
+            "required": [
+              "name",
+              "wiki_link"
+            ],
+            "properties": {
+              "name": {
+                "$id": "#/items/anyOf/1/properties/city/properties/name",
+                "type": "string",
+                "title": "The name schema",
+                "description": "An explanation about the purpose of this instance.",
+                "default": "",
+                "examples": [
+                  "Zagreb"
+                ]
+              },
+              "wiki_link": {
+                "$id": "#/items/anyOf/1/properties/city/properties/wiki_link",
+                "type": "string",
+                "title": "The wiki_link schema",
+                "description": "An explanation about the purpose of this instance.",
+                "default": "",
+                "examples": [
+                  "https://hr.wikipedia.org/wiki/Zagreb"
+                ]
+              }
+            },
+            "additionalProperties": true
+          },
+          "staff": {
+            "$id": "#/items/anyOf/1/properties/staff",
+            "type": "array",
+            "title": "The staff schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": [],
+            "examples": [
+              [
+                {
+                  "name": "ANITA TOMLJENOVIĆ",
+                  "surname": "TOMLJENOVIĆSNA",
+                  "specialization": "Opća/obiteljska medicina",
+                  "specialization_wiki": "Family_medicine"
+                },
+                {
+                  "name": "ANA",
+                  "surname": "PERIĆ-MARKOTIĆ",
+                  "specialization": "Dentalna zdravstvena zaštita (polivalentna)",
+                  "specialization_wiki": "Oral_medicine"
+                }
+              ]
+            ],
+            "additionalItems": true,
+            "items": {
+              "$id": "#/items/anyOf/1/properties/staff/items",
+              "anyOf": [
+                {
+                  "$id": "#/items/anyOf/1/properties/staff/items/anyOf/0",
+                  "type": "object",
+                  "title": "The first anyOf schema",
+                  "description": "An explanation about the purpose of this instance.",
+                  "default": {},
+                  "examples": [
+                    {
+                      "name": "ANITA TOMLJENOVIĆ",
+                      "surname": "TOMLJENOVIĆSNA",
+                      "specialization": "Opća/obiteljska medicina",
+                      "specialization_wiki": "Family_medicine"
+                    }
+                  ],
+                  "required": [
+                    "name",
+                    "surname",
+                    "specialization",
+                    "specialization_wiki"
+                  ],
+                  "properties": {
+                    "name": {
+                      "$id": "#/items/anyOf/1/properties/staff/items/anyOf/0/properties/name",
+                      "type": "string",
+                      "title": "The name schema",
+                      "description": "An explanation about the purpose of this instance.",
+                      "default": "",
+                      "examples": [
+                        "ANITA TOMLJENOVIĆ"
+                      ]
+                    },
+                    "surname": {
+                      "$id": "#/items/anyOf/1/properties/staff/items/anyOf/0/properties/surname",
+                      "type": "string",
+                      "title": "The surname schema",
+                      "description": "An explanation about the purpose of this instance.",
+                      "default": "",
+                      "examples": [
+                        "TOMLJENOVIĆSNA"
+                      ]
+                    },
+                    "specialization": {
+                      "$id": "#/items/anyOf/1/properties/staff/items/anyOf/0/properties/specialization",
+                      "type": "string",
+                      "title": "The specialization schema",
+                      "description": "An explanation about the purpose of this instance.",
+                      "default": "",
+                      "examples": [
+                        "Opća/obiteljska medicina"
+                      ]
+                    },
+                    "specialization_wiki": {
+                      "$id": "#/items/anyOf/1/properties/staff/items/anyOf/0/properties/specialization_wiki",
+                      "type": "string",
+                      "title": "The specialization_wiki schema",
+                      "description": "An explanation about the purpose of this instance.",
+                      "default": "",
+                      "examples": [
+                        "Family_medicine"
+                      ]
+                    }
+                  },
+                  "additionalProperties": true
+                }
+              ]
+            }
+          },
+          "latitude": {
+            "$id": "#/items/anyOf/1/properties/latitude",
+            "type": "string",
+            "title": "The latitude schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+              "45.804525° N"
+            ]
+          },
+          "longitude": {
+            "$id": "#/items/anyOf/1/properties/longitude",
+            "type": "string",
+            "title": "The longitude schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+              "15.969266° E"
+            ]
+          },
+          "last_updated": {
+            "$id": "#/items/anyOf/1/properties/last_updated",
+            "type": "string",
+            "title": "The last_updated schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+              "26/10/2020"
+            ]
+          },
+          "staff_list_complete": {
+            "$id": "#/items/anyOf/1/properties/staff_list_complete",
+            "type": "boolean",
+            "title": "The staff_list_complete schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": false,
+            "examples": [
+              false
+            ]
+          }
+        },
+        "additionalProperties": true
+      }
+    ]
+  }
+}
