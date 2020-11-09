@@ -10,6 +10,7 @@
   "author": "Fran Jurinec",
   "license": "MIT",
   "dependencies": {
+    "cors": "^2.8.5",
     "express": "^4.17.1",
     "json2csv": "^5.0.3",
     "mongodb": "^3.6.3"

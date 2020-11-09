@@ -3,10 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <title>Zdrastvene Institucije</title>
-    <script src="scripts/index.js"></script>
+    <link rel="stylesheet" href="styles/datatable.css">
 </head>
 <body>
-
-
+<div class="search-console">
+    <div class="button">
+        Vrati se na poćetnu stranicu
+    </div>
+</div>
+<div class="search-console">
+    <form onsubmit="getFilteredData(); return false">
+        <label for="field">Odaberi polje:</label>
+        <select id="field" name="field">
+            <option value="any">Sva polja</option>
+            <option value="name">Naziv</option>
+            <option value="address">Adresa</option>
+            <option value="email">E-pošta</option>
+            <option value="website">Web-stranica</option>
+        </select><br>
+        <label for="query">Tekst za pretragu:</label>
+        <input id="query" type="text" name="query"><br>
+        <input class="button" type="submit" value="Filtriraj rezultate">
+    </form>
+</div>
+<div id="hospital_list" class="hospital-list">
+</div>
+<script src="scripts/datatable.js"></script>
 </body>
 </html>

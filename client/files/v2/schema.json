@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema",
-  "$id": "https://github.com/franjurinec/OR2020Data/blob/main/client/files/hospitals.json",
+  "$id": "https://github.com/franjurinec/OR2020Data/blob/main/client/files/v2/hospitals.json",
   "type": "array",
   "title": "The root schema",
   "description": "The root schema comprises the entire JSON document.",

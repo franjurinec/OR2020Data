@@ -1,9 +1,12 @@
 const express = require('express');
+const cors = require('cors')
 const { Parser } = require('json2csv')
 const db = require('./databaseHandler');
 
 const parser = new Parser()
 const app = express()
+
+app.use(cors())
 
 app.get('/hospitals', async (req, res) => {
     res.json(await db.get('hospitals', req.query))
