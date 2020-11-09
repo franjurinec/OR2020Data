@@ -3,13 +3,76 @@
 <head>
     <meta charset="UTF-8">
     <title>Zdrastvene Institucije</title>
-    <link rel="stylesheet" href="styles/datatable.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+
+        .search-console {
+            font-size: 1.5rem;
+        }
+
+        select {
+            font-size: 1.5rem;
+            border-radius: 0.5rem;
+            margin-bottom: 1rem;
+        }
+
+        input[type=text] {
+            font-size: 1.5rem;
+            border-radius: 0.5rem;
+        }
+
+        .hospital-list {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 5rem 20rem;
+            font-size: 1.2rem;
+        }
+
+        .button {
+            font-size: 1.5rem;
+            border-radius: 0.5rem;
+            border: none;
+            background-color: black;
+            color: white;
+            padding: 0.7rem;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            margin: 3rem;
+        }
+
+        .button:hover {
+            background-color: gray;
+        }
+
+        .downloads {
+            font-size: 1.3rem;
+        }
+
+        /*noinspection CssUnusedSymbol*/
+        .hospital {
+            border-radius: 0.5rem;
+            border: 1px solid black;
+            margin-bottom: 3rem;
+            padding: 3rem;
+        }
+
+        /*noinspection CssUnusedSymbol*/
+        .hospital-attribute {
+            text-align: left;
+            padding-left: 3rem;
+        }
+    </style>
 </head>
 <body>
 <div class="search-console">
-    <div class="button">
+    <a href="index.html" class="button">
         Vrati se na poćetnu stranicu
-    </div>
+    </a>
 </div>
 <div class="search-console">
     <form onsubmit="getFilteredData(); return false">
@@ -26,8 +89,75 @@
         <input class="button" type="submit" value="Filtriraj rezultate">
     </form>
 </div>
+<div class="downloads">
+    Preuzmi u JSON formatu: <a id="json_download" href="http://localhost:3000/hospitals/json" download="hospitals.json">hospitals_v2.json</a><br>
+    Preuzmi u CSV formatu: <a id="csv_download" href="http://localhost:3000/hospitals/csv" download="hospitals.csv">hospitals_v2.csv</a>
+</div>
 <div id="hospital_list" class="hospital-list">
 </div>
-<script src="scripts/datatable.js"></script>
+<script>
+    function getFilteredData() {
+        console.log('Fetch requested!')
+        const fieldElement = document.getElementById('field')
+        const queryElement = document.getElementById('query')
+        const listElement = document.getElementById('hospital_list')
+        listElement.innerHTML = ''
+
+        const queryString = '?' + fieldElement.value + '=' + queryElement.value
+
+        document.getElementById('json_download').href = 'http://localhost:3000/hospitals/json' + queryString
+        document.getElementById('csv_download').href = 'http://localhost:3000/hospitals/csv' + queryString
+
+        fetch('http://localhost:3000/hospitals' + queryString)
+            .then(res => res.json())
+            .then(hospitals => {
+                console.log(hospitals)
+                hospitals.forEach(hospital => {
+                    const newHospitalElement = document.createElement('div')
+                    newHospitalElement.classList.add('hospital')
+                    addElements(newHospitalElement, hospital)
+                    listElement.appendChild(newHospitalElement)
+                })
+            })
+    }
+
+    function addElements(element, data) {
+        console.log(Object.keys(data))
+        Object.keys(data).forEach(key => {
+            const attribute = document.createElement("div")
+            attribute.classList.add("hospital-attribute")
+            if (typeof data[key] === "object") {
+                attribute.textContent = "Staff:"
+                data[key].forEach(element => {
+                    const subAttribute = document.createElement("div")
+                    subAttribute.classList.add("hospital-attribute")
+                    subAttribute.textContent = "Staff Member:"
+                    addElements(subAttribute, element)
+                    attribute.appendChild(subAttribute)
+                })
+            } else {
+                attribute.textContent = (key.charAt(0).toUpperCase() + key.slice(1)).replaceAll('_', ' ') + ': ' + data[key]
+            }
+            element.appendChild(attribute)
+        })
+    }
+
+    (() => {
+            console.log('Fetch requested!')
+            const listElement = document.getElementById('hospital_list')
+
+            fetch('http://localhost:3000/hospitals')
+                .then(res => res.json())
+                .then(hospitals => {
+                    console.log(hospitals)
+                    hospitals.forEach(hospital => {
+                        const newHospitalElement = document.createElement('div')
+                        newHospitalElement.classList.add('hospital')
+                        addElements(newHospitalElement, hospital)
+                        listElement.appendChild(newHospitalElement)
+                    })
+                })}
+    )()
+</script>
 </body>
 </html>
