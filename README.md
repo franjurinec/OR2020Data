@@ -3,8 +3,8 @@
 - __Licence:__ MIT
 - __Author:__ Fran Jurinec
 - __Dataset Name:__ Medical Institutions in Croatia
-- __Dataset Version:__ 1.0
-- __Last Updated:__ 26/10/2020
+- __Dataset Version:__ 2.0
+- __Last Updated:__ 09/11/2020
 - __Language:__ Croatian
 - __Attributes:__
   - name (string)
@@ -12,10 +12,11 @@
   - telephone (string)
   - email (string)
   - website	(string)
-  - city.name	(string)
-  - city.wiki_link (string)
   - staff	(list)
-  - specializations (list)	
+    - name (string)
+    - surname (string)
+    - specialization (string)
+    - spectialization_wiki (string [handle only])
   - lattitude	(string)
   - longitude	(string)
   - last_updated (date)
