@@ -1,282 +1,252 @@
 [
-  {
-    "_id": {
-      "$oid": "5fa978858f69ed5dac814d82"
-    },
-    "name": "Dom Zdravlja Zagreb - Centar (Vrbanićeva 6)",
-    "address": "Vrbanićeva 6, 10000 Zagreb, Hrvatska",
-    "telephone": "014649654",
-    "email": "ravnateljstvo@dzz-centar.hr",
-    "website": "https://dzz-centar.hr/",
-    "staff": [
-      {
-        "name": "IVANA",
-        "surname": "VALLE GOLJAK",
-        "specialization": "Dentalna zdravstvena zaštita (polivalentna)",
-        "specialization_wiki": "Oral_medicine"
-      },
-      {
-        "name": "SNJEŽANA",
-        "surname": "STANUŠIĆ",
-        "specialization": "Opća/obiteljska medicina",
-        "specialization_wiki": "Family_medicine"
-      }
-    ],
-    "latitude": "45.809331° N",
-    "longitude": "15.995387° E",
-    "last_updated": "26/10/2020",
-    "staff_list_complete": true
-  },
-  {
-    "_id": {
-      "$oid": "5fa978858f69ed5dac814d83"
-    },
-    "name": "Dom Zdravlja Zagreb - Zapad (Prečko 2)",
-    "address": "Prečko 2, 10000 Zagreb, Hrvatska",
-    "telephone": "013780444",
-    "email": "pitanja@dzz-zapad.hr",
-    "website": "http://www.dzz-zapad.hr/home.php",
-    "staff": [
-      {
-        "name": "MIA",
-        "surname": "POTURICA",
-        "specialization": "Opća/obiteljska medicina",
-        "specialization_wiki": "Family_medicine"
-      },
-      {
-        "name": "HUŠMAN",
-        "surname": "MILETIĆ VERA",
-        "specialization": "Opća/obiteljska medicina",
-        "specialization_wiki": "Family_medicine"
-      }
-    ],
-    "latitude": "45.793294° N",
-    "longitude": "15.905029° E",
-    "last_updated": "26/10/2020",
-    "staff_list_complete": false
-  },
-  {
-    "_id": {
-      "$oid": "5fa978858f69ed5dac814d84"
-    },
-    "name": "Dom Zdravlja Zagreb - Istok (Ivanićgradska 38)",
-    "address": "Ivanićgradska 38, 10040 Zagreb, Hrvatska",
-    "telephone": "012395435",
-    "email": "pisarnica@dzz-istok.hr",
-    "website": "http://dzz-istok.hr/",
-    "staff": [
-      {
-        "name": "BILJANA",
-        "surname": "PARIZOSKA-BELOVIĆ",
-        "specialization": "Opća/obiteljska medicina",
-        "specialization_wiki": "Family_medicine"
-      },
-      {
-        "name": "BOŽENA",
-        "surname": "HADER",
-        "specialization": "Zdravstvena zaštita predškolske djece",
-        "specialization_wiki": "Pediatrics"
-      }
-    ],
-    "latitude": "45.805815° N",
-    "longitude": "16.018916° E",
-    "last_updated": "26/10/2020",
-    "staff_list_complete": false
-  },
-  {
-    "_id": {
-      "$oid": "5fa978858f69ed5dac814d85"
-    },
-    "name": "Dom Zdravlja Zagreb - Zapad (Podsusedska Aleja 79)",
-    "address": "Podsusedska Aleja 79, 10000 Zagreb, Hrvatska",
-    "telephone": "013490909",
-    "email": "pitanja@dzz-zapad.hr",
-    "website": "http://www.dzz-zapad.hr/home.php",
-    "staff": [
-      {
-        "name": "IVAN",
-        "surname": "ŠIMUNEC",
-        "specialization": "Opća/obiteljska medicina",
-        "specialization_wiki": "Family_medicine"
-      },
-      {
-        "name": "ALENKA",
-        "surname": "AKŠAMIJA GOVIĆ",
-        "specialization": "Zdravstvena zaštita žena",
-        "specialization_wiki": "Gynaecology"
-      }
-    ],
-    "latitude": "45.815524° N",
-    "longitude": "15.846045° E",
-    "last_updated": "26/10/2020",
-    "staff_list_complete": false
-  },
-  {
-    "_id": {
-      "$oid": "5fa978858f69ed5dac814d86"
-    },
-    "name": "Dom Zdravlja Zagreb - Istok (Resnički put 81)",
-    "address": "Resnički put 81, 10040 Zagreb, Hrvatska",
-    "telephone": "012852168",
-    "email": "pisarnica@dzz-istok.hr",
-    "website": "http://dzz-istok.hr/",
-    "staff": [
-      {
-        "name": "TEUTA",
-        "surname": "BISAKU STOŠIĆ",
-        "specialization": "Dentalna zdravstvena zaštita (polivalentna)",
-        "specialization_wiki": "Oral_medicine"
-      },
-      {
-        "name": "GORANA",
-        "surname": "ŽUVELA",
-        "specialization": "Opća/obiteljska medicina",
-        "specialization_wiki": "Family_medicine"
-      }
-    ],
-    "latitude": "45.814419° N",
-    "longitude": "16.062070° E",
-    "last_updated": "26/10/2020",
-    "staff_list_complete": true
-  },
-  {
-    "_id": {
-      "$oid": "5fa978858f69ed5dac814d87"
-    },
-    "name": "Dom Zdravlja Zagreb - Centar (Martićeva 63A)",
-    "address": "Martićeva 63A, 10000 Zagreb, Hrvatska",
-    "telephone": "014604111",
-    "email": "ravnateljstvo@dzz-centar.hr",
-    "website": "https://dzz-centar.hr/",
-    "staff": [
-      {
-        "name": "LJUBICA",
-        "surname": "LAZIĆ VULETIĆ",
-        "specialization": "Opća/obiteljska medicina",
-        "specialization_wiki": "Family_medicine"
-      },
-      {
-        "name": "OSKAR",
-        "surname": "CRNALIĆ",
-        "specialization": "Opća/obiteljska medicina",
-        "specialization_wiki": "Family_medicine"
-      }
-    ],
-    "latitude": "45.804624° N",
-    "longitude": "15.975359° E",
-    "last_updated": "26/10/2020",
-    "staff_list_complete": false
-  },
-  {
-    "_id": {
-      "$oid": "5fa978858f69ed5dac814d88"
-    },
-    "name": "Dom Zdravlja Zagreb - Centar (Runjaninova 4)",
-    "address": "Runjaninova 4, 10000 Zagreb, Hrvatska",
-    "telephone": "014897693",
-    "email": "ravnateljstvo@dzz-centar.hr",
-    "website": "https://dzz-centar.hr/",
-    "staff": [
-      {
-        "name": "ANITA TOMLJENOVIĆ",
-        "surname": "TOMLJENOVIĆSNA",
-        "specialization": "Opća/obiteljska medicina",
-        "specialization_wiki": "Family_medicine"
-      },
-      {
-        "name": "ANA",
-        "surname": "PERIĆ-MARKOTIĆ",
-        "specialization": "Dentalna zdravstvena zaštita (polivalentna)",
-        "specialization_wiki": "Oral_medicine"
-      }
-    ],
-    "latitude": "45.804525° N",
-    "longitude": "15.969266° E",
-    "last_updated": "26/10/2020",
-    "staff_list_complete": false
-  },
-  {
-    "_id": {
-      "$oid": "5fa978858f69ed5dac814d89"
-    },
-    "name": "Dom Zdravlja Zagreb - Zapad (Gandhijeva 5)",
-    "address": "Ulica Mahatme Gandhia 5, 10000, Zagreb, Hrvatska",
-    "telephone": "013455037",
-    "email": "pitanja@dzz-zapad.hr",
-    "website": "http://www.dzz-zapad.hr/home.php",
-    "staff": [
-      {
-        "name": "MAJA",
-        "surname": "PAVIĆ PATRLJ",
-        "specialization": "Dentalna zdravstvena zaštita (polivalentna)",
-        "specialization_wiki": "Oral_medicine"
-      },
-      {
-        "name": "MARTA",
-        "surname": "KROLO",
-        "specialization": "Dentalna zdravstvena zaštita (polivalentna)",
-        "specialization_wiki": "Oral_medicine"
-      }
-    ],
-    "latitude": "45.815743° N",
-    "longitude": "15.877107° E",
-    "last_updated": "26/10/2020",
-    "staff_list_complete": false
-  },
-  {
-    "_id": {
-      "$oid": "5fa978858f69ed5dac814d8a"
-    },
-    "name": "Dom Zdravlja Zagreb - Centar (Grgura Ninskog 3)",
-    "address": "Ulica Grgura Ninskog 3, 10000 Zagreb, Hrvatska",
-    "telephone": "014573244",
-    "email": "ravnateljstvo@dzz-centar.hr",
-    "website": "https://dzz-centar.hr/",
-    "staff": [
-      {
-        "name": "VESNA",
-        "surname": "MATRAPAZOVSKI SINTI",
-        "specialization": "Opća/obiteljska medicina",
-        "specialization_wiki": "Family_medicine"
-      },
-      {
-        "name": "ZORAN",
-        "surname": "TUČKAR",
-        "specialization": "Psihologijska djelatnost",
-        "specialization_wiki": "Psychiatry"
-      }
-    ],
-    "latitude": "45.804624° N",
-    "longitude": "15.975359° E",
-    "last_updated": "26/10/2020",
-    "staff_list_complete": false
-  },
-  {
-    "_id": {
-      "$oid": "5fa978858f69ed5dac814d8b"
-    },
-    "name": "Dom Zdravlja Zagreb - Istok (Grižanska 4)",
-    "address": "Grižanska 4, 10040 Zagreb, Hrvatska",
-    "telephone": "012960444",
-    "email": "pisarnica@dzz-istok.hr",
-    "website": "http://dzz-istok.hr/",
-    "staff": [
-      {
-        "name": "ADA",
-        "surname": "DRČELIĆ MATUTINOVIĆ",
-        "specialization": "Opća/obiteljska medicina",
-        "specialization_wiki": "Family_medicine"
-      },
-      {
-        "name": "KATARINA",
-        "surname": "MUSTAPIĆ",
-        "specialization": "Dentalna zdravstvena zaštita (polivalentna)",
-        "specialization_wiki": "Oral_medicine"
-      }
-    ],
-    "latitude": "45.829919° N",
-    "longitude": "16.052109° E",
-    "last_updated": "26/10/2020",
-    "staff_list_complete": false
-  }
+	{
+		"name" : "Dom Zdravlja Zagreb - Centar (Vrbanićeva 6)",
+		"address" : "Vrbanićeva 6, 10000 Zagreb, Hrvatska",
+		"telephone" : "014649654",
+		"email" : "ravnateljstvo@dzz-centar.hr",
+		"website" : "https://dzz-centar.hr/",
+		"staff" : [
+			{
+				"name" : "IVANA",
+				"surname" : "VALLE GOLJAK",
+				"specialization" : "Dentalna zdravstvena zaštita (polivalentna)",
+				"specialization_wiki" : "Oral_medicine"
+			},
+			{
+				"name" : "SNJEŽANA",
+				"surname" : "STANUŠIĆ",
+				"specialization" : "Opća/obiteljska medicina",
+				"specialization_wiki" : "Family_medicine"
+			}
+		],
+		"latitude" : "45.809331° N",
+		"longitude" : "15.995387° E",
+		"last_updated" : "26/10/2020",
+		"staff_list_complete" : true
+	},
+	{
+		"name" : "Dom Zdravlja Zagreb - Zapad (Prečko 2)",
+		"address" : "Prečko 2, 10000 Zagreb, Hrvatska",
+		"telephone" : "013780444",
+		"email" : "pitanja@dzz-zapad.hr",
+		"website" : "http://www.dzz-zapad.hr/home.php",
+		"staff" : [
+			{
+				"name" : "MIA",
+				"surname" : "POTURICA",
+				"specialization" : "Opća/obiteljska medicina",
+				"specialization_wiki" : "Family_medicine"
+			},
+			{
+				"name" : "HUŠMAN",
+				"surname" : "MILETIĆ VERA",
+				"specialization" : "Opća/obiteljska medicina",
+				"specialization_wiki" : "Family_medicine"
+			}
+		],
+		"latitude" : "45.793294° N",
+		"longitude" : "15.905029° E",
+		"last_updated" : "26/10/2020",
+		"staff_list_complete" : false
+	},
+	{
+		"name" : "Dom Zdravlja Zagreb - Istok (Ivanićgradska 38)",
+		"address" : "Ivanićgradska 38, 10040 Zagreb, Hrvatska",
+		"telephone" : "012395435",
+		"email" : "pisarnica@dzz-istok.hr",
+		"website" : "http://dzz-istok.hr/",
+		"staff" : [
+			{
+				"name" : "BILJANA",
+				"surname" : "PARIZOSKA-BELOVIĆ",
+				"specialization" : "Opća/obiteljska medicina",
+				"specialization_wiki" : "Family_medicine"
+			},
+			{
+				"name" : "BOŽENA",
+				"surname" : "HADER",
+				"specialization" : "Zdravstvena zaštita predškolske djece",
+				"specialization_wiki" : "Pediatrics"
+			}
+		],
+		"latitude" : "45.805815° N",
+		"longitude" : "16.018916° E",
+		"last_updated" : "26/10/2020",
+		"staff_list_complete" : false
+	},
+	{
+		"name" : "Dom Zdravlja Zagreb - Zapad (Podsusedska Aleja 79)",
+		"address" : "Podsusedska Aleja 79, 10000 Zagreb, Hrvatska",
+		"telephone" : "013490909",
+		"email" : "pitanja@dzz-zapad.hr",
+		"website" : "http://www.dzz-zapad.hr/home.php",
+		"staff" : [
+			{
+				"name" : "IVAN",
+				"surname" : "ŠIMUNEC",
+				"specialization" : "Opća/obiteljska medicina",
+				"specialization_wiki" : "Family_medicine"
+			},
+			{
+				"name" : "ALENKA",
+				"surname" : "AKŠAMIJA GOVIĆ",
+				"specialization" : "Zdravstvena zaštita žena",
+				"specialization_wiki" : "Gynaecology"
+			}
+		],
+		"latitude" : "45.815524° N",
+		"longitude" : "15.846045° E",
+		"last_updated" : "26/10/2020",
+		"staff_list_complete" : false
+	},
+	{
+		"name" : "Dom Zdravlja Zagreb - Istok (Resnički put 81)",
+		"address" : "Resnički put 81, 10040 Zagreb, Hrvatska",
+		"telephone" : "012852168",
+		"email" : "pisarnica@dzz-istok.hr",
+		"website" : "http://dzz-istok.hr/",
+		"staff" : [
+			{
+				"name" : "TEUTA",
+				"surname" : "BISAKU STOŠIĆ",
+				"specialization" : "Dentalna zdravstvena zaštita (polivalentna)",
+				"specialization_wiki" : "Oral_medicine"
+			},
+			{
+				"name" : "GORANA",
+				"surname" : "ŽUVELA",
+				"specialization" : "Opća/obiteljska medicina",
+				"specialization_wiki" : "Family_medicine"
+			}
+		],
+		"latitude" : "45.814419° N",
+		"longitude" : "16.062070° E",
+		"last_updated" : "26/10/2020",
+		"staff_list_complete" : true
+	},
+	{
+		"name" : "Dom Zdravlja Zagreb - Centar (Martićeva 63A)",
+		"address" : "Martićeva 63A, 10000 Zagreb, Hrvatska",
+		"telephone" : "014604111",
+		"email" : "ravnateljstvo@dzz-centar.hr",
+		"website" : "https://dzz-centar.hr/",
+		"staff" : [
+			{
+				"name" : "LJUBICA",
+				"surname" : "LAZIĆ VULETIĆ",
+				"specialization" : "Opća/obiteljska medicina",
+				"specialization_wiki" : "Family_medicine"
+			},
+			{
+				"name" : "OSKAR",
+				"surname" : "CRNALIĆ",
+				"specialization" : "Opća/obiteljska medicina",
+				"specialization_wiki" : "Family_medicine"
+			}
+		],
+		"latitude" : "45.804624° N",
+		"longitude" : "15.975359° E",
+		"last_updated" : "26/10/2020",
+		"staff_list_complete" : false
+	},
+	{
+		"name" : "Dom Zdravlja Zagreb - Centar (Runjaninova 4)",
+		"address" : "Runjaninova 4, 10000 Zagreb, Hrvatska",
+		"telephone" : "014897693",
+		"email" : "ravnateljstvo@dzz-centar.hr",
+		"website" : "https://dzz-centar.hr/",
+		"staff" : [
+			{
+				"name" : "ANITA TOMLJENOVIĆ",
+				"surname" : "TOMLJENOVIĆSNA",
+				"specialization" : "Opća/obiteljska medicina",
+				"specialization_wiki" : "Family_medicine"
+			},
+			{
+				"name" : "ANA",
+				"surname" : "PERIĆ-MARKOTIĆ",
+				"specialization" : "Dentalna zdravstvena zaštita (polivalentna)",
+				"specialization_wiki" : "Oral_medicine"
+			}
+		],
+		"latitude" : "45.804525° N",
+		"longitude" : "15.969266° E",
+		"last_updated" : "26/10/2020",
+		"staff_list_complete" : false
+	},
+	{
+		"name" : "Dom Zdravlja Zagreb - Zapad (Gandhijeva 5)",
+		"address" : "Ulica Mahatme Gandhia 5, 10000, Zagreb, Hrvatska",
+		"telephone" : "013455037",
+		"email" : "pitanja@dzz-zapad.hr",
+		"website" : "http://www.dzz-zapad.hr/home.php",
+		"staff" : [
+			{
+				"name" : "MAJA",
+				"surname" : "PAVIĆ PATRLJ",
+				"specialization" : "Dentalna zdravstvena zaštita (polivalentna)",
+				"specialization_wiki" : "Oral_medicine"
+			},
+			{
+				"name" : "MARTA",
+				"surname" : "KROLO",
+				"specialization" : "Dentalna zdravstvena zaštita (polivalentna)",
+				"specialization_wiki" : "Oral_medicine"
+			}
+		],
+		"latitude" : "45.815743° N",
+		"longitude" : "15.877107° E",
+		"last_updated" : "26/10/2020",
+		"staff_list_complete" : false
+	},
+	{
+		"name" : "Dom Zdravlja Zagreb - Centar (Grgura Ninskog 3)",
+		"address" : "Ulica Grgura Ninskog 3, 10000 Zagreb, Hrvatska",
+		"telephone" : "014573244",
+		"email" : "ravnateljstvo@dzz-centar.hr",
+		"website" : "https://dzz-centar.hr/",
+		"staff" : [
+			{
+				"name" : "VESNA",
+				"surname" : "MATRAPAZOVSKI SINTI",
+				"specialization" : "Opća/obiteljska medicina",
+				"specialization_wiki" : "Family_medicine"
+			},
+			{
+				"name" : "ZORAN",
+				"surname" : "TUČKAR",
+				"specialization" : "Psihologijska djelatnost",
+				"specialization_wiki" : "Psychiatry"
+			}
+		],
+		"latitude" : "45.804624° N",
+		"longitude" : "15.975359° E",
+		"last_updated" : "26/10/2020",
+		"staff_list_complete" : false
+	},
+	{
+		"name" : "Dom Zdravlja Zagreb - Istok (Grižanska 4)",
+		"address" : "Grižanska 4, 10040 Zagreb, Hrvatska",
+		"telephone" : "012960444",
+		"email" : "pisarnica@dzz-istok.hr",
+		"website" : "http://dzz-istok.hr/",
+		"staff" : [
+			{
+				"name" : "ADA",
+				"surname" : "DRČELIĆ MATUTINOVIĆ",
+				"specialization" : "Opća/obiteljska medicina",
+				"specialization_wiki" : "Family_medicine"
+			},
+			{
+				"name" : "KATARINA",
+				"surname" : "MUSTAPIĆ",
+				"specialization" : "Dentalna zdravstvena zaštita (polivalentna)",
+				"specialization_wiki" : "Oral_medicine"
+			}
+		],
+		"latitude" : "45.829919° N",
+		"longitude" : "16.052109° E",
+		"last_updated" : "26/10/2020",
+		"staff_list_complete" : false
+	}
 ]
