@@ -2,6 +2,7 @@ const express = require('express');
 const cors = require('cors')
 const { Parser } = require('json2csv')
 const db = require('./databaseHandler');
+const path = require('path');
 
 const parser = new Parser()
 const app = express()
@@ -25,5 +26,13 @@ app.get('/hospitals/csv', async (req, res) => {
 app.get('/hospitals/fields', async  (req, res) => {
     res.json(await db.getFields('hospitals'))
 })
+
+app.get('/index', function(req, res) {
+    res.sendFile(path.join(__dirname + '/index.html'));
+});
+
+app.get('/datatable', function(req, res) {
+    res.sendFile(path.join(__dirname + '/datatable.html'))
+});
 
 app.listen(3000)
