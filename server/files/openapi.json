@@ -1,0 +1,709 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+      "version": "3.0",
+      "title": "Croatian Medical Institutions",
+      "description": "A list of medical institutions in Croatia, including employees and specializations."
+    },
+    "paths": {
+      "/hospital": {
+        "get": {
+          "description": "Returns a list of all hospitals",
+          "responses": {
+            "200": {
+              "description": "Successfully returned all hospitals.",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/HospitalsResponse"
+                  }
+                }
+              }
+            },
+            "500": {
+              "description": "Failed to fetch hospitals.",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/500Response"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "post": {
+          "description": "Create a hospital",
+          "requestBody": {
+            "required": true,
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HospitalNoLink"
+                }
+              }
+            }
+          },
+          "responses": {
+            "201": {
+              "description": "Successfully created hospital.",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/CreatedResponse"
+                  }
+                }
+              }
+            },
+            "400": {
+              "description": "Invalid request.",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/400Response"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/hospital/{hospital_id}": {
+        "get": {
+          "description": "Returns a specific hospital by ID",
+          "parameters": [
+            {
+              "name": "hospital_id",
+              "in": "path",
+              "description": "ID of hospital to return.",
+              "required": true,
+              "schema": {
+                "type": "string"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "Successfully returned all hospitals.",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/HospitalResponse"
+                  }
+                }
+              }
+            },
+            "400": {
+              "description": "Invalid request.",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/400Response"
+                  }
+                }
+              }
+            },
+            "404": {
+              "description": "Not found.",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/404Response"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "put": {
+          "description": "Update a hospital",
+          "parameters": [
+            {
+              "name": "hospital_id",
+              "in": "path",
+              "description": "ID of hospital to return.",
+              "required": true,
+              "schema": {
+                "type": "string"
+              }
+            }
+          ],
+          "requestBody": {
+            "required": false,
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HospitalNoLink"
+                }
+              }
+            }
+          },
+          "responses": {
+            "200": {
+              "description": "Successfully updated hospital.",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/UpdatedResponse"
+                  }
+                }
+              }
+            },
+            "400": {
+              "description": "Invalid request.",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/400Response"
+                  }
+                }
+              }
+            },
+            "404": {
+              "description": "Not found.",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/404Response"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "delete": {
+          "description": "Delete a hospital",
+          "parameters": [
+            {
+              "name": "hospital_id",
+              "in": "path",
+              "description": "ID of hospital to return.",
+              "required": true,
+              "schema": {
+                "type": "string"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "Successfully deleted hospital.",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/DeletedResponse"
+                  }
+                }
+              }
+            },
+            "400": {
+              "description": "Invalid request.",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/400Response"
+                  }
+                }
+              }
+            },
+            "404": {
+              "description": "Not found.",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/404Response"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/hospital/{hospital_id}/employees": {
+        "get": {
+          "description": "Returns employees of a specific hospital by ID",
+          "parameters": [
+            {
+              "name": "hospital_id",
+              "in": "path",
+              "description": "ID of hospital to return employees.",
+              "required": true,
+              "schema": {
+                "type": "string"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "Successfully returned employees for hospital.",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/EmployeesResponse"
+                  }
+                }
+              }
+            },
+            "400": {
+              "description": "Invalid request.",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/400Response"
+                  }
+                }
+              }
+            },
+            "404": {
+              "description": "Not found.",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/404Response"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/hospital/{id}/employee/{eid}": {
+        "get": {
+          "description": "Returns a specific employee by ID",
+          "parameters": [
+            {
+              "name": "id",
+              "in": "path",
+              "description": "ID of hospital to return.",
+              "required": true,
+              "schema": {
+                "type": "string"
+              }
+            },
+            {
+              "name": "eid",
+              "in": "path",
+              "description": "ID of employee to return.",
+              "required": true,
+              "schema": {
+                "type": "integer"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "Successfully returned employee.",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/EmployeeResponse"
+                  }
+                }
+              }
+            },
+            "400": {
+              "description": "Invalid request.",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/400Response"
+                  }
+                }
+              }
+            },
+            "404": {
+              "description": "Resource not found.",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/404Response"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/employee": {
+        "get": {
+          "description": "Returns all employees.",
+          "responses": {
+            "200": {
+              "description": "Successfully returned all employees.",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/EmployeesResponse"
+                  }
+                }
+              }
+            },
+            "500": {
+              "description": "Failed to fetch employees.",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/500Response"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "servers": [
+      {
+        "description": "SwaggerHub API Auto Mocking",
+        "url": "https://virtserver.swaggerhub.com/franjurinec/OR2020-HOSPITALS/3.0"
+      },
+      {
+        "description": "Local Server",
+        "url": "http://localhost:/3000/api"
+      }
+    ],
+    "components": {
+      "schemas": {
+        "Link": {
+          "type": "object",
+          "properties": {
+            "href": {
+              "type": "string",
+              "example": "/hospital"
+            },
+            "rel": {
+              "type": "string",
+              "example": "List All Hospitals"
+            },
+            "type": {
+              "type": "string",
+              "example": "GET"
+            }
+          }
+        },
+        "EmployeeNoLink": {
+          "type": "object",
+          "properties": {
+            "index": {
+              "type": "integer"
+            },
+            "name": {
+              "type": "string"
+            },
+            "surname": {
+              "type": "string"
+            },
+            "specialization": {
+              "type": "string"
+            },
+            "specialization_wiki": {
+              "type": "string"
+            }
+          }
+        },
+        "Employee": {
+          "type": "object",
+          "properties": {
+            "index": {
+              "type": "integer"
+            },
+            "name": {
+              "type": "string"
+            },
+            "surname": {
+              "type": "string"
+            },
+            "specialization": {
+              "type": "string"
+            },
+            "specialization_wiki": {
+              "type": "string"
+            },
+            "links": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/Link"
+              }
+            }
+          }
+        },
+        "Hospital": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "string"
+            },
+            "name": {
+              "type": "string"
+            },
+            "address": {
+              "type": "string"
+            },
+            "telephone": {
+              "type": "string"
+            },
+            "email": {
+              "type": "string"
+            },
+            "website": {
+              "type": "string"
+            },
+            "staff": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/EmployeeNoLink"
+              }
+            },
+            "latitude": {
+              "type": "number"
+            },
+            "longitude": {
+              "type": "number"
+            },
+            "last_updated": {
+              "type": "string"
+            },
+            "staff_list_complete": {
+              "type": "boolean"
+            },
+            "links": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/Link"
+              }
+            }
+          }
+        },
+        "HospitalNoLink": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "address": {
+              "type": "string"
+            },
+            "telephone": {
+              "type": "string"
+            },
+            "email": {
+              "type": "string"
+            },
+            "website": {
+              "type": "string"
+            },
+            "staff": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/EmployeeNoLink"
+              }
+            },
+            "latitude": {
+              "type": "number"
+            },
+            "longitude": {
+              "type": "number"
+            },
+            "last_updated": {
+              "type": "string"
+            },
+            "staff_list_complete": {
+              "type": "boolean"
+            }
+          }
+        },
+        "HospitalResponse": {
+          "type": "object",
+          "properties": {
+            "status": {
+              "type": "string",
+              "example": "OK"
+            },
+            "message": {
+              "type": "string",
+              "example": "Returned requested hospital."
+            },
+            "response": {
+              "type": "object",
+              "items": {
+                "$ref": "#/components/schemas/Hospital"
+              }
+            }
+          }
+        },
+        "HospitalsResponse": {
+          "type": "object",
+          "properties": {
+            "status": {
+              "type": "string",
+              "example": "OK"
+            },
+            "message": {
+              "type": "string",
+              "example": "Returned list of all hospitals."
+            },
+            "response": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/Hospital"
+              }
+            }
+          }
+        },
+        "EmployeeResponse": {
+          "type": "object",
+          "properties": {
+            "status": {
+              "type": "string",
+              "example": "OK"
+            },
+            "message": {
+              "type": "string",
+              "example": "Returned requested hospital employee detail."
+            },
+            "response": {
+              "type": "object",
+              "items": {
+                "$ref": "#/components/schemas/Employee"
+              }
+            }
+          }
+        },
+        "EmployeesResponse": {
+          "type": "object",
+          "properties": {
+            "status": {
+              "type": "string",
+              "example": "OK"
+            },
+            "message": {
+              "type": "string",
+              "example": "Returned requested hospital employees."
+            },
+            "response": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/Employee"
+              }
+            }
+          }
+        },
+        "400Response": {
+          "type": "object",
+          "properties": {
+            "status": {
+              "type": "string",
+              "example": "Bad Request"
+            },
+            "message": {
+              "type": "string",
+              "example": "Invalid request."
+            }
+          }
+        },
+        "404Response": {
+          "type": "object",
+          "properties": {
+            "status": {
+              "type": "string",
+              "example": "Not Found"
+            },
+            "message": {
+              "type": "string",
+              "example": "Requested resource was not found."
+            }
+          }
+        },
+        "500Response": {
+          "type": "object",
+          "properties": {
+            "status": {
+              "type": "string",
+              "example": "Internal Server Error"
+            },
+            "message": {
+              "type": "string",
+              "example": "An error has occured on the server."
+            }
+          }
+        },
+        "CreatedResponse": {
+          "type": "object",
+          "properties": {
+            "status": {
+              "type": "string"
+            },
+            "message": {
+              "type": "string"
+            },
+            "response": {
+              "type": "object",
+              "properties": {
+                "hospital_id": {
+                  "type": "string",
+                  "example": "5fa978858f69ed5dac814d82"
+                },
+                "links": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Link"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "UpdatedResponse": {
+          "type": "object",
+          "properties": {
+            "status": {
+              "type": "string"
+            },
+            "message": {
+              "type": "string"
+            },
+            "response": {
+              "type": "object",
+              "properties": {
+                "hospital_id": {
+                  "type": "string",
+                  "example": "5fa978858f69ed5dac814d82"
+                },
+                "links": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Link"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "DeletedResponse": {
+          "type": "object",
+          "properties": {
+            "status": {
+              "type": "string"
+            },
+            "message": {
+              "type": "string"
+            },
+            "response": {
+              "type": "object",
+              "properties": {
+                "hospital_id": {
+                  "type": "string",
+                  "example": "5fa978858f69ed5dac814d82"
+                },
+                "links": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Link"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
