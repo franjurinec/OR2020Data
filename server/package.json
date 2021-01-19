@@ -10,9 +10,15 @@
   "author": "Fran Jurinec",
   "license": "MIT",
   "dependencies": {
+    "cache-manager": "^3.4.0",
+    "cache-manager-fs": "^1.0.8",
     "cors": "^2.8.5",
     "express": "^4.17.1",
     "json2csv": "^5.0.3",
-    "mongodb": "^3.6.3"
+    "mongodb": "^3.6.3",
+    "node-fetch": "^2.6.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
   }
 }

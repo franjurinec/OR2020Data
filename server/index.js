@@ -4,6 +4,11 @@ const { Parser } = require('json2csv')
 const db = require('./databaseHandler');
 const path = require('path');
 const { response } = require('express');
+const fetch = require("node-fetch");
+const fs = require('fs');
+var cacheManager = require('cache-manager');
+var fsStore = require('cache-manager-fs');
+var cache = cacheManager.caching({store: fsStore, options: {ttl: 60*60, maxsize: 1000*1000*1000, path:'fscache', preventfill:true, reviveBuffers: true}});
 
 const parser = new Parser()
 const app = express()
@@ -48,6 +53,15 @@ app.get('/api/hospital', async (req, res) => {
     var hospitals = await db.apiGet('hospitals', {})
     if (hospitals) {
         hospitals.forEach(hospital => {
+            hospital['@context'] = {
+                name: 'https://schema.org/name',
+                address: 'https://schema.org/address',
+                telephone: 'https://schema.org/telephone',
+                email: 'https://schema.org/email',
+                website: 'https://schema.org/URL',
+                
+            }
+            hospital.slika = "http://localhost:3000/api/hospital/"+hospital._id+"/picture"
             hospital.links = [
                 {
                     href: '/api/hospital/' + hospital._id + '/employee',
@@ -119,6 +133,15 @@ app.get('/api/hospital/:id', async (req, res) => {
     var id = req.params.id;
     db.apiGetOne('hospitals', id).then(hospital => {
         if (hospital) {
+            hospital['@context'] = {
+                name: 'https://schema.org/name',
+                address: 'https://schema.org/address',
+                telephone: 'https://schema.org/telephone',
+                email: 'https://schema.org/email',
+                website: 'https://schema.org/URL',
+                
+            }
+            hospital.slika = "http://localhost:3000/api/hospital/"+hospital._id+"/picture"
             hospital.links = [
                 {
                     href: '/api/hospital/' + hospital._id + '/employee',
@@ -260,6 +283,11 @@ app.get('/api/hospital/:id/employee/:eid', async (req, res) => {
     db.apiGetOne('hospitals', id).then(hospital => {
         if (hospital) {
             if (hospital.staff[eid]) {
+                hospital.staff[eid].links = {
+                    href: '/api/hospital/' + hospital._id,
+                    ref: 'Hospital',
+                    type: 'GET'
+                }
                 res.status(200).json({
                     status: "OK",
                     message: "Returned requested hospital employee detail.",
@@ -320,6 +348,56 @@ app.get('/api/employee', async (req, res) => {
         res.status(500).json({
             status: "Internal Server Error",
             message: "An error has occured on the server.",
+            response: null
+        })
+    }
+})
+
+async function getWikiImageSource(title) {
+    const wikiFetch = await fetch('https://en.wikipedia.org/w/api.php?action=query&prop=images&format=json&titles=' + title)
+    const wikiBody = await wikiFetch.json()
+    const imageName = wikiBody.query.pages[Object.keys(wikiBody.query.pages)[0]].images[4].title
+    const imageInfoFetch = await fetch('https://en.wikipedia.org/w/api.php?action=query&prop=imageinfo&iiprop=url&format=json&titles=' + imageName)
+    const imageInfo = await imageInfoFetch.json()
+    return imageInfo.query.pages[Object.keys(imageInfo.query.pages)[0]].imageinfo[0].url
+}
+
+async function getWikiImage(title) {
+    const imageSource = await getWikiImageSource(title)
+    const imgResponse = await fetch(imageSource)
+    return await imgResponse.buffer()
+}
+
+app.get('/api/hospital/:id/picture', async (req, res) => {
+    var id = req.params.id;
+    try {
+        var hospital = await db.apiGetOne('hospitals', id)
+        if (hospital) {
+            const title = hospital.staff[0].specialization_wiki
+            cache.wrap(title, 
+                function (cacheCallback) {
+                    setTimeout(async function () {
+                        const imageBuffer = await getWikiImage(title)
+                        cacheCallback(null, imageBuffer)
+                    }, 1000);
+                },
+                function (err, imageBuffer) {
+                    res.contentType('image/jpeg')
+                    res.end(imageBuffer, 'binary')
+                })
+
+        } else {
+            res.status(404).json({
+                status: "Not Found",
+                message: "Requested resource not found.",
+                response: null
+            })
+        }
+    } catch(error) {
+        console.log(error)
+        res.status(400).json({
+            status: "Bad Request",
+            message: "Invalid Request.",
             response: null
         })
     }
